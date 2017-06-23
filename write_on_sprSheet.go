@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -21,21 +20,20 @@ import (
 
 func getTokenFromWeb(config *oauth2.Config) *oauth2.Token {
 	authURL := config.AuthCodeURL("state-token", oauth2.AccessTypeOffline)
-	exec.Command("open", authURL)
 	fmt.Printf("Go to the following link in your browser then type the "+
 		"authorization code: \n%v\n", authURL)
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter text: ")
-	text, _ := reader.ReadString('\n')
-	fmt.Println(text)
+	exec.Command("open", authURL)
+	//reader := bufio.NewReader(os.Stdin)
+	//fmt.Print("Enter text: ")
+	//text, _ := reader.ReadString('\n')
+	//fmt.Println(text)
 
-	//var code string
-	//
-	//if _, err := fmt.Scan(&code); err != nil {
-	//	log.Fatalf("Unable to read authorization code %v", err)
-	//}
+	var code string
+	if _, err := fmt.Scan(&code); err != nil {
+		log.Fatalf("Unable to read authorization code %v", err)
+	}
 
-	tok, err := config.Exchange(oauth2.NoContext, "4/YA3SWA6AalH-EQqdyfehmG4O72PpvPinkARWzkLV3Kg")
+	tok, err := config.Exchange(oauth2.NoContext, code)
 	if err != nil {
 		log.Fatalf("Unable to retrieve token from web %v", err)
 	}
