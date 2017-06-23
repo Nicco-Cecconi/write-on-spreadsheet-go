@@ -1,3 +1,3 @@
-web: go run write_on_sprSheet.go
+web: dir ; go run write_on_sprSheet.go
 
 
