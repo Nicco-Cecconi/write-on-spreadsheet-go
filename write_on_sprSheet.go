@@ -126,11 +126,11 @@ func main() {
 		Values: [][]interface{}{{"prova"}, {"ciao"}, {"ok"}},
 	}
 
-	unsfl, err := srv.Spreadsheets.Values.Update(spreadsheetId, range2, rb).ValueInputOption(valueInputOption).Context(ctx).Do()
+	resp, err := srv.Spreadsheets.Values.Update(spreadsheetId, range2, rb).ValueInputOption(valueInputOption).Context(ctx).Do()
 	if err != nil {
 		log.Fatal(err)
 	}
 	// TODO: Change code below to process the `resp` object:
 	//fmt.Printf("%#v\n", resp)
-	fmt.Print("Yor file has been edited")
+	fmt.Print(resp)
 }
