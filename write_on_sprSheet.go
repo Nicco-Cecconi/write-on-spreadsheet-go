@@ -29,12 +29,13 @@ func getTokenFromWeb(config *oauth2.Config) *oauth2.Token {
 	text, _ := reader.ReadString('\n')
 	fmt.Println(text)
 
-	var code string
-	if _, err := fmt.Scan(&code); err != nil {
-		log.Fatalf("Unable to read authorization code %v", err)
-	}
+	//var code string
+	//
+	//if _, err := fmt.Scan(&code); err != nil {
+	//	log.Fatalf("Unable to read authorization code %v", err)
+	//}
 
-	tok, err := config.Exchange(oauth2.NoContext, code)
+	tok, err := config.Exchange(oauth2.NoContext, "4/YA3SWA6AalH-EQqdyfehmG4O72PpvPinkARWzkLV3Kg")
 	if err != nil {
 		log.Fatalf("Unable to retrieve token from web %v", err)
 	}
