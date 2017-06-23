@@ -155,12 +155,11 @@
 			"path": "google.golang.org/appengine/urlfetch",
 			"revision": "a2f4131514e563cedfdb6e7d267df9ad48591e93",
 			"revisionTime": "2017-05-22T22:48:38Z"
-		}
-	      	"rootPath": "github.com/heroku/go-getting-started",
-   		 "heroku": {
+		},
+   		 "heroku" , {
        		 "install" : [ "./..." ],
        		 "goVersion": "go1.6"
-         	}, 	
-		],
+         	}], 	
+		
 	"rootPath": "github.com/heroku/write-on-spreadsheet-go"
 }
