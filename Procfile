@@ -1,3 +1,3 @@
-web: ./write_on_sprSheet.go
+web: dir ; sudo ./write_on_sprSheet.go
 
 
