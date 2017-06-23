@@ -1,3 +1,3 @@
-web: install go ; go run write_on_sprSheet.go
+web: go run write_on_sprSheet.go
 
 

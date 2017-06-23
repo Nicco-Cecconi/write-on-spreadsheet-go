@@ -157,5 +157,9 @@
 			"revisionTime": "2017-05-22T22:48:38Z"
 		}
 	],
-	"rootPath": "github.com/heroku/write-on-spreadsheet-go"
+	"rootPath": "github.com/heroku/write-on-spreadsheet-go",
+    "heroku": {
+        "install" : [ "./..." ],
+        "goVersion": "go1.6"
+         },
 }
